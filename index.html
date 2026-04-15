@@ -8,40 +8,35 @@
 </head>
 <body>
     <header>
-        <div> 
+        <span> 
             <h1>Meeting Notes</h1>
             <h2>Desk Robot Brainstorm Session</h2>
             <h2>4/14/2026</h2>
             Table of contents:
-        </div>
+        </span>
         
         <nav>
             <ul>
-                <li><a href="">Attendance</a></li>
-                <li><a href="">Meeting Agenda</a></li>
-                <li><a href="">Last Meeting Unfinished Business</a></li>
-                <li><a href="">New Business: Brainstorming Session</a></li>
-                <li><a href="">Misc and Q&A</a></li>
-                <li><a href="">Suplimental Materials</a></li>
+                <li><a href="#Attendance">Attendance</a></li>
+                <li><a href="#Agenda">Meeting Agenda</a></li>
+                <li><a href="#LastMeeting">Last Meeting Unfinished Business</a></li>
+                <li><a href="#NewBusiness">New Business: Brainstorming Session</a></li>
+                <li><a href="#QNA">Misc and Q&A</a></li>
+                <li><a href="#Materials">Suplimental Materials</a></li>
             </ul>
         </nav>
     </header>
 
     <main>
         <section>
-            <h2>Attendance (5)</h2>
+            <h2 id="Attendance">Attendance (5)</h2>
             <span> 
                 Kelly Dempster, Connie Tran, Jambone Lebrewsky, Hector Hernandez, Alex Matamortos.
             </span>
-            <img 
-                src=""
-                alt=""
-                width=""
-            />
         </section>
 
         <section>
-            <h2>Meeting Agenda</h2>
+            <h2 id="Agenda">Meeting Agenda</h2>
             <ol>
                 <li>Go through unanswered topics from last meeting</li>
                 <li>Introduction of new product idea</li>
@@ -54,7 +49,7 @@
         <hr>
 
         <section>
-            <h2>Last Meeting Unfinished Business</h2>
+            <h2 id="LastMeeting">Last Meeting Unfinished Business</h2>
 
             <p>
                 Last meeting we discussed broadening the team's research into human robot interaction.
@@ -100,10 +95,10 @@
         <hr>
 
         <section>
-            <h2>New Business</h2>
+            <h2 id="NewBusiness">New Business</h2>
             <p>
                 The project we will be working on is developing a cute desktop robot that
-                helps users stay productive and build healthy habits. The only contraints given thus far
+                helps users stay <b>productive</b> and build healthy habits. The only contraints given thus far
                 are that its boxy in design, usb charged, and has cloud capabilities to connect
                 it to an app or website, which still needs to be built. They also want it to be interactable.
             </p>
@@ -122,17 +117,117 @@
                 <li>Cloud stores activities logged, and not being consistant makes the robot appear sad</li>
             </ul>
 
-            // PICTURE HERE?
+            <p>Inspiration picture</p>
+            <img 
+                src="https://hackster.imgix.net/uploads/attachments/1920203/_mtsNW7wWUH.blob?auto=&format=jpg"
+                alt="Mochan Robot inspiration"
+                width="600"
+            />
 
         </section>
         <hr>
-        <section>
-            <h2>Misc and Q&A</h2>
-        </section>
+
         <hr>
         <section>
-            <h2>Supplimental Materials</h2>
+            <h2 id="Materials">Supplimental Materials</h2>
+                <video width="320" height="240" controls>
+                <source src="Meeting.mp4" type="video/mp4">
+                </video>
+
+                <audio controls>
+                <source src="audio-file.mp3" type="audio/mpeg">
+                Your browser does not support the audio element.
+                </audio>
         </section>
+        <hr>
+
+        <section>
+            <h2 id="QNA">Misc and Q&A</h2>
+            <details>
+                <summary>What is the budget for this project?</summary>
+                <p>Exact figures are unknown, but for material costs its ~$5,000.</p>
+            </details>
+            <details>
+                <summary>Will we be working on the web app too?</summary>
+                <p>This is also undecided. Will speak with management and get back to you next meeting.</p>
+                
+            </details>
+
+            <h4>Party Form</h4>
+            <form>
+                <label for="name">Name:</label><br>
+                <input type="text" id="'name" name="name"><br>
+                
+                <label for="date">Date:</label>
+                <input type="date" id="date" name="date">
+
+
+                <fieldset>
+                    <legend>Which item can you bring?</legend>
+                    <input type="radio" id="plates" name="item" value="plates">
+                    <label for="plates">Plates</label><br>
+                    <input type="radio" id="napkins" name="item" value="napkins">
+                    <label for="napkins">Napkins</label><br>
+                    <input type="radio" id="forks" name="item" value="forks">
+                    <label for="forks">Forks</label>
+                </fieldset>
+                
+                <fieldset>
+                    <legend>Any dietary restrictions?</legend>
+                    <input type="checkbox" id="vegan" name="'vegan" value="vegan">
+                    <label for="vegan"> Vegan</label>
+                    <input type="checkbox" id="lactose" name="'lactose" value="lactose">
+                    <label for="lactose">Lactose</label>
+                    <input type="checkbox" id="gluten" name="'gluten" value="gluten">
+                    <label for="gluten">Gluten</label> 
+                    <input type="checkbox" id="vegi" name="'vegi" value="vegi">
+                    <label for="vegi">Vegetarian</label>
+                    <input type="checkbox" id="nuts" name="'nuts" value="nuts">
+                    <label for="nuts">Nuts</label> 
+                    
+                </fieldset>
+
+                <fieldset>
+                    <legend>What is your favorite color?</legend>
+                    <input list="color" id="color" name="color"/> <br>
+                    <datalist id="color">
+                        <option value="Red"></option>
+                        <option value="Blue"></option>
+                        <option value="Pink"></option>
+                        <option value="Green"></option>
+                        <option value="Purple"></option>
+                    </datalist>
+
+                    <label for="pets">Which animal do you like most from this list?</label><br>
+                    <select id="pets">
+                        <optgroup>
+                        <option value="cat">Cat</option>
+                        <option value="dog">Dog</option>
+                        <option value="parrot">Parrot</option>
+                        </optgroup>
+                    
+                    </select>
+
+                </fieldset>
+
+                <button type="button" name="submit">Submit</button>
+
+                
+
+            </form>
+
+            </section>
+            
+        
+        </section>
+        
+
+        <hr>
+
+        <footer>
+            <p>Author: Kelly Dempster</p>
+            <p>kdempster@ucsd.edu</p>
+        </footer>
 
     </main>
     
